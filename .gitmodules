@@ -1,0 +1,12 @@
+[submodule "tmp_resumo_compreensao_necropolitica"]
+	path = tmp_resumo_compreensao_necropolitica
+	url = https://github.com/luascfl/tmp_resumo_compreensao_necropolitica.git
+[submodule "tmp_psicogenese_da_linguagem_escrita"]
+	path = tmp_psicogenese_da_linguagem_escrita
+	url = https://github.com/luascfl/tmp_psicogenese_da_linguagem_escrita.git
+[submodule "tmp_frases_vygotsky"]
+	path = tmp_frases_vygotsky
+	url = https://github.com/luascfl/tmp_frases_vygotsky.git
+[submodule "tmp_resenha_walden_ii"]
+	path = tmp_resenha_walden_ii
+	url = https://github.com/luascfl/tmp_resenha_walden_ii.git
