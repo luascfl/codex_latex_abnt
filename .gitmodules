@@ -10,3 +10,6 @@
 [submodule "tmp_resenha_walden_ii"]
 	path = tmp_resenha_walden_ii
 	url = https://github.com/luascfl/tmp_resenha_walden_ii.git
+[submodule "tmp_diario_de_bordo"]
+	path = tmp_diario_de_bordo
+	url = https://github.com/luascfl/tmp_diario_de_bordo.git

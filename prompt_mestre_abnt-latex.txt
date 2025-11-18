@@ -28,11 +28,19 @@ PROMPT {
     {id: 13, text: "Valores padrão na ausência de informações: Departamento de Educação, Curso de Psicologia, Lucas Camilo Carvalho, Salvador, 2025."},
     {id: 14, text: "Sistema de citações exclusivamente autor–data. Use `\\autorcite{}` (que aceita até duas opções: `\\autorcite{chave}`, `\\autorcite[p.~123]{chave}`, `\\autorcite*{chave}`, `\\autorcite*[p.~123]{chave}`) e não altere sua assinatura."},
     {id: 15, text: "Elementos opcionais controlados por chaves `\\mostrar...`; mantenha-os `true` exceto quando o usuário solicitar ocultação."},
-    {id: 16, text: "Estilo textual direto, sem construções “não é apenas”; evite emojis e substituições de vírgula por travessões/hífens."},
+    {id: 16, text: "Estilo textual direto, sem construções “não é apenas”; evite emojis e substituições de vírgula por travessões/hífens (nunca use em dash em lugar de vírgula, especialmente em diálogos)."},
     {id: 17, text: "Inclua arquivo `.toc` mínimo via `filecontents*` para garantir compilação do sumário já na primeira execução."},
-    {id: 18, text: "Garanta que o `.tex` seja autossuficiente em conteúdo textual e referências, dependendo apenas do `.bst` já presente no diretório."},
-    {id: 19, text: "Títulos de capítulos iniciam em nova página e preservam 1,5 entre o título e o parágrafo seguinte; seções e subseções mantêm 1,5 antes/depois na mesma página."},
-    {id: 20, text: "ABNT NBR 6023:2018 — configure `abntex2cite` com `abnt-emphasize=bf` para colocar em negrito o elemento localizador (título de obras completas, nome do periódico, título do livro em capítulos “In:” e título de páginas web)."}
+  {id: 18, text: "Garanta que o `.tex` seja autossuficiente em conteúdo textual e referências, dependendo apenas do `.bst` já presente no diretório."},
+  {id: 19, text: "Títulos de capítulos iniciam em nova página e preservam 1,5 entre o título e o parágrafo seguinte; seções e subseções mantêm 1,5 antes/depois na mesma página."},
+  {id: 20, text: "ABNT NBR 6023:2018 — configure `abntex2cite` com `abnt-emphasize=bf` para colocar em negrito o elemento localizador (título de obras completas, nome do periódico, título do livro em capítulos “In:” e título de páginas web)."},
+  {id: 21, text: "Resumos: gere um único `resumo` em português e um Abstract em inglês usando `\\begin{resumo}[ABSTRACT] ... \\end{resumo}` com `otherlanguage*{english}`, garantindo headings distintos e sem duplicar “RESUMO”."},
+  {id: 22, text: "Sumário sempre começa em nova página (quebra antes) e termina com outra quebra para separar a parte textual."},
+  {id: 23, text: "Seções primárias (indicativo 1, 2, 3, ...) devem iniciar nova página, vir em caixa alta, negrito, alinhadas à esquerda, corpo 12 em Arial, e sem qualquer traço/ponto após o número (NBR 14724/6024)."},
+    {id: 24, text: "Subseções (secundárias, terciárias, quaternárias — 1.1, 1.1.1, ...) permanecem na mesma página, com seções secundárias (1.1) em negrito e sentence case e níveis inferiores sem negrito, todos alinhados à esquerda em Arial 12; a numeração segue progressiva sem sinais após o indicativo e deve coincidir com o sumário."},
+  {id: 25, text: "Elementos pré-textuais (capa, folha de rosto etc.) devem permanecer centralizados e distribuídos no centro da página, mantendo o título principal no miolo da página conforme NBR 14724."},
+  {id: 26, text: "Folha de rosto: mantenha autor e título centralizados com margens verticais equilibradas, utilize bloco justificado com recuo de 7 cm (sem indentação) para o parágrafo descritivo e preserve a cidade em sentece case, replicando o padrão oficial da UNEB."},
+    {id: 26, text: "Numeração progressiva deve ser contínua em todas as seções e subseções e deve coincidir com as entradas do sumário, sem uso de travessões ou pontos finais."},
+    {id: 27, text: "Referências (seção pós-textual) devem ter título centralizado em caixa alta 12pt e seguir estritamente o estilo `abntex2-alf-local` já presente no diretório."}
   ],
   mapping: {
     columns: ["Tipo ABNT", "Google Docs", "Word", "Fonte / Tamanho / Recuo / Espaçamento"],

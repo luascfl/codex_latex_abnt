@@ -1,0 +1,316 @@
+% !TEX program = xelatex
+% Template ABNT para resenhas críticas derivado do arquivo resenha_walden2.tex
+
+\documentclass[12pt, a4paper, oneside]{abntex2}
+
+% --- PACOTES PRINCIPAIS ---
+\usepackage{fontspec}
+\usepackage[brazil]{babel}
+\usepackage[alf,abnt-show-options=none,abnt-emphasize=bf]{abntex2cite}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+\usepackage{xparse}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\AtBeginDocument{\let\tt\ttfamily}
+
+\geometry{left=3cm, top=3cm, right=2cm, bottom=2cm}
+\setmainfont{Arial}
+
+% --- PARÁGRAFOS E ESPAÇAMENTO ---
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\OnehalfSpacing
+\raggedbottom
+
+% --- ESPAÇAMENTO ENTRE TÍTULOS E TEXTO ---
+\titlespacing*{\chapter}{0pt}{0pt}{1.5\baselineskip}
+\titlespacing*{\section}{0pt}{1.5\baselineskip}{1.5\baselineskip}
+\titlespacing*{\subsection}{0pt}{1.5\baselineskip}{1.5\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{1.5\baselineskip}{1.5\baselineskip}
+
+% --- Nomes das seções pré-textuais ---
+\renewcommand{\resumoname}{RESUMO}
+\renewcommand{\abstractname}{ABSTRACT}
+\renewcommand{\contentsname}{\textbf{\MakeUppercase{SUMÁRIO}}}
+
+% --- Ajustes de fonte para títulos ---
+\renewcommand{\ABNTEXchapterfont}{\bfseries\normalsize}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+\renewcommand{\ABNTEXsectionfont}{\bfseries\normalsize}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsectionfont}{\normalfont\normalsize}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+\setboolean{ABNTEXupperchapter}{true}
+\setboolean{ABNTEXuppersection}{false}
+\setboolean{ABNTEXuppersubsection}{false}
+
+% --- Numeração de página ---
+\makepagestyle{padraopagina}
+\makeevenhead{padraopagina}{}{}{\fontsize{10}{12}\selectfont\thepage}
+\makeoddhead{padraopagina}{}{}{\fontsize{10}{12}\selectfont\thepage}
+\makeevenfoot{padraopagina}{}{}{}
+\makeoddfoot{padraopagina}{}{}{}
+
+% --- Citações diretas longas ---
+\renewenvironment{citacao}{%
+  \list{}{%
+    \listparindent=\parindent
+    \parsep=0pt plus 1pt
+    \leftmargin=4cm
+    \rightmargin=0cm
+  }%
+  \item\relax\fontsize{10}{15}\selectfont
+}{\endlist}
+
+% --- DADOS EDITÁVEIS DO TRABALHO ---
+\newcommand{\nomeinstituicao}{Universidade do Estado da Bahia}
+\newcommand{\nomedepartamento}{Departamento de Educação}
+\newcommand{\nomecurso}{Curso de Psicologia}
+\newcommand{\nomeautor}{Lucas Camilo Carvalho}
+\newcommand{\nomecidade}{Salvador}
+\newcommand{\anoacademico}{2025}
+\newcommand{\nomedisciplina}{Nome da disciplina}
+\newcommand{\nomeorientador}{Prof.(a) Nome do orientador}
+\newcommand{\tituloprincipal}{Título da resenha}
+\newcommand{\titulocomplemento}{Subtítulo opcional}
+\newcommand{\tipodocumento}{Resenha crítica}
+\newcommand{\logoinstituicao}{logo_uneb.png} % altere ou deixe vazio
+
+\newcommand{\formatartitulo}{%
+  \ifx\titulocomplemento\empty
+    {\bfseries\normalsize\MakeUppercase{\tituloprincipal}}%
+  \else
+    {\bfseries\normalsize\MakeUppercase{\tituloprincipal}: \normalfont\normalsize\titulocomplemento}%
+  \fi
+}
+\titulo{\formatartitulo}
+
+% --- METADADOS ---
+\autor{\textbf{\MakeUppercase{\nomeautor}}}
+\orientador{}
+\coorientador{}
+\instituicao{%
+  \textbf{\MakeUppercase{\nomeinstituicao}}\\
+  \textbf{\MakeUppercase{\nomedepartamento}}\\
+  \textbf{\MakeUppercase{\nomecurso}}
+}
+\tipotrabalho{\textbf{\MakeUppercase{\tipodocumento}}}
+\local{\textbf{\nomecidade}}
+\data{\textbf{\anoacademico}}
+
+% --- DESCRIÇÃO NA FOLHA DE ROSTO ---
+\newcommand{\folhaderostodescricao}{%
+  Trabalho apresentado como requisito parcial para a obtenção de nota na disciplina \nomedisciplina, sob orientação de \nomeorientador, no \nomecurso\ da \nomeinstituicao.
+}
+\preambulo{}
+
+\newcommand{\imprimircapaformatada}{%
+  \begin{capa}
+    \begin{center}
+      \vspace*{-1.73cm}
+      \IfFileExists{\logoinstituicao}{\includegraphics[width=5cm]{\logoinstituicao}\par}{}
+      \vspace{1cm}
+      {\bfseries\normalsize\MakeUppercase{\nomeinstituicao}\par}
+      {\bfseries\normalsize\MakeUppercase{\nomedepartamento}\par}
+      {\bfseries\normalsize\MakeUppercase{\nomecurso}\par}
+      \vspace{3cm}
+      {\bfseries\normalsize\MakeUppercase{\nomeautor}\par}
+      \vspace{3cm}
+      {\formatartitulo\par}
+      \vfill
+      {\bfseries\normalsize\nomecidade\par}
+      {\bfseries\normalsize\anoacademico\par}
+    \end{center}
+  \end{capa}
+}
+
+\newcommand{\imprimirfolhaderostoformatada}{%
+  \begin{folhaderosto}
+    \SingleSpacing
+    {\centering\bfseries\normalsize\MakeUppercase{\nomeautor}\par}
+    \vspace{\fill}
+    {\centering\formatartitulo\par}
+    \vspace{1.5cm}
+    {
+      \SingleSpacing
+      \leftskip=7cm
+      \parindent=0pt
+      \noindent\folhaderostodescricao\par
+    }
+    \vspace{\fill}
+    {\centering\bfseries\normalsize\nomecidade\par}
+    {\centering\bfseries\normalsize\anoacademico\par}
+  \end{folhaderosto}
+}
+
+% --- Configurações de seções ---
+\setsecheadstyle{\normalsize\bfseries}
+\setsubsecheadstyle{\normalsize}
+\setsubsubsecheadstyle{\normalsize}
+\setlength{\afterchapskip}{1.5\baselineskip}
+\setaftersecskip{1.5\baselineskip}
+\setaftersubsecskip{1.5\baselineskip}
+\setaftersubsubsecskip{1.5\baselineskip}
+\setlength{\cftbeforechapterskip}{0pt}
+\setlength{\cftbeforesectionskip}{0pt}
+\setlength{\cftbeforesubsectionskip}{0pt}
+\cftsetindents{chapter}{0em}{1em}
+\cftsetindents{section}{0em}{2em}
+\cftsetindents{subsection}{0em}{2.5em}
+\cftsetindents{subsubsection}{0em}{3em}
+\setlength{\cftlastnumwidth}{1em}
+\renewcommand{\cftchapterfont}{\bfseries\MakeUppercase}
+\renewcommand{\cftchapterpagefont}{\bfseries}
+\renewcommand{\cftchapteraftersnum}{\space}
+\renewcommand{\chapternumberline}[1]{#1\hspace{0.3em}}
+\newcommand{\overridetoclengths}{%
+  \let\oldsetlength\setlength
+  \def\setlength##1##2{%
+    \ifx##1\cftchapterindent
+      \oldsetlength{\cftchapterindent}{0pt}%
+    \else\ifx##1\cftchapternumwidth
+      \oldsetlength{\cftchapternumwidth}{1em}%
+    \else
+      \oldsetlength{##1}{##2}%
+    \fi\fi}%
+}
+\newcommand{\restoretoclengths}{\let\setlength\oldsetlength}
+
+% --- Chaves para exibição ---
+\newif\ifmostrarcapa
+\newif\ifmostrarfolhaderosto
+\newif\ifmostrarresumo
+\newif\ifmostrarabstract
+\newif\ifmostrarsumario
+\newif\ifmostrartexto
+\mostrarcapatrue
+\mostrarfolhaderostotrue
+\mostrarresumotrue
+\mostrarabstracttrue
+\mostrarsumariotrue
+\mostrartextotrue
+\renewcommand{\cftsectionfont}{\bfseries}
+\renewcommand{\cftsectionpagefont}{\bfseries}
+\renewcommand{\cftsubsectionfont}{\normalfont}
+\renewcommand{\cftsubsectionpagefont}{\normalfont}
+\renewcommand{\cftsubsubsectionfont}{\normalfont}
+\renewcommand{\cftsubsubsectionpagefont}{\normalfont}
+\renewcommand{\cftdotsep}{1}
+
+% --- Referências ---
+\renewcommand{\bibname}{\textbf{\MakeUppercase{REFERÊNCIAS}}}
+\providecommand{\autorcite}{}
+\RenewDocumentCommand{\autorcite}{s O{} m}{%
+  \IfBooleanTF{#1}
+    {\hyperlink{cite.#3}{\citeyear{#3}\IfBlankTF{#2}{}{, p.~#2}}}
+    {\hyperlink{cite.#3}{(\citeauthoronline{#3}, \citeyear{#3}\IfBlankTF{#2}{}{, p.~#2})}}}
+
+% --- Biblioteca BibTeX de exemplo ---
+\begin{filecontents*}{\jobname.bib}
+@book{autor_ano,
+  author    = {SOBRENOME, Nome},
+  title     = {Título da obra analisada},
+  year      = {Ano},
+  publisher = {Editora},
+  address   = {Cidade}
+}
+\end{filecontents*}
+
+\begin{filecontents*}{\jobname.toc}
+\changetocdepth {4}
+\babel@toc {brazil}{}\relax
+\end{filecontents*}
+
+\begin{document}
+\addtocontents{toc}{\protect\setlength{\protect\cftchapterindent}{0pt}}
+\addtocontents{toc}{\protect\setlength{\protect\cftchapternumwidth}{1em}}
+
+% --- PRETEXTUAL ---
+\pretextual
+\pagestyle{empty}
+\SingleSpacing
+\ifmostrarcapa
+  \imprimircapaformatada
+\fi
+\ifmostrarfolhaderosto
+  \imprimirfolhaderostoformatada
+\fi
+\ifmostrarresumo
+  \begingroup
+  \SingleSpacing
+  \setlength{\parindent}{0pt}
+  \begin{resumo}
+  Descreva em um parágrafo objetivo o objetivo da resenha, a obra analisada, o recorte temático e os principais argumentos trabalhados.
+  \vspace{\baselineskip}
+  \textbf{Palavras-chave:} palavra 1. palavra 2. palavra 3.
+  \end{resumo}
+  \endgroup
+\fi
+\ifmostrarabstract
+  \begingroup
+  \SingleSpacing
+  \setlength{\parindent}{0pt}
+  \begin{resumo}[ABSTRACT]
+  \begin{otherlanguage*}{english}
+  Provide the translated abstract here, summarizing purpose, scope and outcomes of the review.
+  \vspace{\baselineskip}
+  \textbf{Keywords:} keyword 1. keyword 2. keyword 3.
+  \end{otherlanguage*}
+  \end{resumo}
+  \endgroup
+\fi
+\ifmostrarsumario
+  \cleardoublepage
+  {
+    \OnehalfSpacing
+    \overridetoclengths
+    \pdfbookmark{\contentsname}{toc}
+    \tableofcontents*
+    \restoretoclengths
+  }
+  \cleardoublepage
+\fi
+
+% --- TEXTUAL ---
+\ifmostrartexto
+\OnehalfSpacing
+\textual
+\pagestyle{padraopagina}
+\aliaspagestyle{chapter}{padraopagina}
+
+\chapter{Introdução}
+Contextualize a obra, apresente o autor analisado, situe a disciplina e explicite os objetivos e o recorte crítico da resenha \autorcite{autor_ano}.
+
+\chapter{Síntese da obra}
+Utilize seções para apresentar os principais tópicos narrativos ou argumentos do texto analisado.
+
+\section{Primeiro eixo de análise}
+Descreva o argumento principal, indicando passagens relevantes da obra (\autorcite*{autor_ano}) e dos referenciais teóricos utilizados.
+
+\section{Segundo eixo de análise}
+Detalhe outro aspecto da obra e relacione-o com a bibliografia complementar.
+
+\chapter{Discussão crítica}
+Construa o diálogo entre a obra resenhada e outras referências, apontando convergências e tensões conceituais.
+
+\section{Limitações e contribuições}
+Apresente uma avaliação equilibrada, indicando limites metodológicos e alcances teóricos.
+
+\chapter{Considerações finais}
+\begin{Spacing}{1.5}
+Retome a pergunta central da resenha, sintetize os principais resultados da análise crítica e sugira desdobramentos de pesquisa ou prática.
+\end{Spacing}
+\fi
+
+% --- PÓS-TEXTUAL ---
+\postextual
+\addtocontents{toc}{\protect\setlength{\protect\cftchapterindent}{0pt}}
+\addtocontents{toc}{\protect\setlength{\protect\cftchapternumwidth}{3.2em}}
+\bibliographystyle{abntex2-alf-local}
+\renewcommand{\bibname}{\MakeUppercase{REFERÊNCIAS}}
+\bibliography{\jobname}
+
+\end{document}
