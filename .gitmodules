@@ -13,3 +13,6 @@
 [submodule "tmp_diario_de_bordo"]
 	path = tmp_diario_de_bordo
 	url = https://github.com/luascfl/tmp_diario_de_bordo.git
+[submodule "tmp_seara_psicologia_social"]
+	path = tmp_seara_psicologia_social
+	url = https://github.com/luascfl/tmp_seara_psicologia_social.git

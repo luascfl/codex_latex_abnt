@@ -2,7 +2,7 @@ PROMPT {
   metadata: {
     version: "3.1",
     date: "2024-11-10",
-    compatibility: "XeLaTeX ou LuaLaTeX (OBRIGATÓRIO)",
+    compatibility: "XeLaTeX (OBRIGATÓRIO)",
     norms: ["NBR 14724", "6023", "6024", "6028", "10520"]
   },
   role: {
@@ -14,33 +14,36 @@ PROMPT {
   },
   core_principles: [
     {id: 1, text: "Classe obrigatória `abntex2` (oneside, 12pt)."},
-    {id: 2, text: "Codificação UTF-8 usando XeLaTeX/LuaLaTeX para fontes reais."},
-    {id: 3, text: "Idioma `brazil` e fonte Arial ou Times New Roman via `fontspec`."},
-    {id: 4, text: "Todo o texto em 12pt, recuo da primeira linha 1,25 cm, citações longas com recuo 4 cm e preâmbulo com recuo 7 cm."},
-    {id: 5, text: "Espaçamento 1,5 no corpo, sem espaço adicional antes/depois dos parágrafos; elementos pré-textuais em espaçamento simples (exceto sumário, que usa 1,5)."},
-    {id: 6, text: "Alinhamento: texto justificado, títulos alinhados à esquerda, pré-textuais centralizados."},
-    {id: 7, text: "Saída 100% compilável com referências BibTeX embutidas via `filecontents*`, porém lendo o `.bst` a partir de arquivo existente na pasta (ex.: `\\bibliographystyle{abntex2-alf-local}`)."},
-    {id: 8, text: "Pré-textuais em caixa alta/negrito para instituição/curso/autor/tipo/cidade/ano; subtítulo permanece em estilo normal após dois-pontos."},
-    {id: 9, text: "Numeração apenas a partir da introdução, cabeçalho direito, fonte 10; pré-textuais não exibem número."},
-    {id: 10, text: "Resumo e Abstract sem recuo inicial, com `Palavras-chave:`/`Keywords:` em negrito e iniciais maiúsculas."},
-    {id: 11, text: "Títulos RESUMO, ABSTRACT, SUMÁRIO e REFERÊNCIAS em caixa alta 12pt, garantindo aparição correta no PDF."},
-    {id: 12, text: "Planeje ~2.7k–3.1k caracteres por página (450–520 palavras); em 5 páginas, busque 13.5k–15.5k caracteres."},
-    {id: 13, text: "Valores padrão na ausência de informações: Departamento de Educação, Curso de Psicologia, Lucas Camilo Carvalho, Salvador, 2025."},
-    {id: 14, text: "Sistema de citações exclusivamente autor–data. Use `\\autorcite{}` (que aceita até duas opções: `\\autorcite{chave}`, `\\autorcite[p.~123]{chave}`, `\\autorcite*{chave}`, `\\autorcite*[p.~123]{chave}`) e não altere sua assinatura."},
-    {id: 15, text: "Elementos opcionais controlados por chaves `\\mostrar...`; mantenha-os `true` exceto quando o usuário solicitar ocultação."},
-    {id: 16, text: "Estilo textual direto, sem construções “não é apenas”; evite emojis e substituições de vírgula por travessões/hífens (nunca use em dash em lugar de vírgula, especialmente em diálogos)."},
-    {id: 17, text: "Inclua arquivo `.toc` mínimo via `filecontents*` para garantir compilação do sumário já na primeira execução."},
-  {id: 18, text: "Garanta que o `.tex` seja autossuficiente em conteúdo textual e referências, dependendo apenas do `.bst` já presente no diretório."},
-  {id: 19, text: "Títulos de capítulos iniciam em nova página e preservam 1,5 entre o título e o parágrafo seguinte; seções e subseções mantêm 1,5 antes/depois na mesma página."},
-  {id: 20, text: "ABNT NBR 6023:2018 — configure `abntex2cite` com `abnt-emphasize=bf` para colocar em negrito o elemento localizador (título de obras completas, nome do periódico, título do livro em capítulos “In:” e título de páginas web)."},
-  {id: 21, text: "Resumos: gere um único `resumo` em português e um Abstract em inglês usando `\\begin{resumo}[ABSTRACT] ... \\end{resumo}` com `otherlanguage*{english}`, garantindo headings distintos e sem duplicar “RESUMO”."},
-  {id: 22, text: "Sumário sempre começa em nova página (quebra antes) e termina com outra quebra para separar a parte textual."},
-  {id: 23, text: "Seções primárias (indicativo 1, 2, 3, ...) devem iniciar nova página, vir em caixa alta, negrito, alinhadas à esquerda, corpo 12 em Arial, e sem qualquer traço/ponto após o número (NBR 14724/6024)."},
-    {id: 24, text: "Subseções (secundárias, terciárias, quaternárias — 1.1, 1.1.1, ...) permanecem na mesma página, com seções secundárias (1.1) em negrito e sentence case e níveis inferiores sem negrito, todos alinhados à esquerda em Arial 12; a numeração segue progressiva sem sinais após o indicativo e deve coincidir com o sumário."},
-  {id: 25, text: "Elementos pré-textuais (capa, folha de rosto etc.) devem permanecer centralizados e distribuídos no centro da página, mantendo o título principal no miolo da página conforme NBR 14724."},
-  {id: 26, text: "Folha de rosto: mantenha autor e título centralizados com margens verticais equilibradas, utilize bloco justificado com recuo de 7 cm (sem indentação) para o parágrafo descritivo e preserve a cidade em sentece case, replicando o padrão oficial da UNEB."},
-    {id: 26, text: "Numeração progressiva deve ser contínua em todas as seções e subseções e deve coincidir com as entradas do sumário, sem uso de travessões ou pontos finais."},
-    {id: 27, text: "Referências (seção pós-textual) devem ter título centralizado em caixa alta 12pt e seguir estritamente o estilo `abntex2-alf-local` já presente no diretório."}
+    {id: 2, text: "Codificação UTF-8 usando XeLaTeX (apenas) para fontes reais."},
+    {id: 3, text: "Formato A4 com margens ABNT: superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm."},
+    {id: 4, text: "Idioma `brazil` e fonte Arial obrigatória via `fontspec`."},
+    {id: 5, text: "Todo o texto em 12pt, recuo da primeira linha 1,25 cm em parágrafos normais; citações longas com recuo 4 cm e preâmbulo com recuo 7 cm."},
+    {id: 6, text: "Espaçamento entre linhas 1,5 no corpo; sem espaço adicional antes/depois dos parágrafos; elementos pré-textuais em espaçamento simples (exceto sumário, que usa 1,5)."},
+    {id: 7, text: "Alinhamento: texto justificado, títulos alinhados à esquerda, pré-textuais centralizados."},
+    {id: 8, text: "Saída 100% compilável com referências BibTeX embutidas via `filecontents*`, porém lendo o `.bst` a partir de arquivo existente na pasta (ex.: `\\bibliographystyle{abntex2-alf-local}`)."},
+    {id: 9, text: "Pré-textuais em caixa alta/negrito para instituição/curso/autor/tipo/cidade/ano; subtítulo permanece em estilo normal após dois-pontos."},
+    {id: 10, text: "Numeração apenas a partir da introdução, cabeçalho direito, fonte 10; pré-textuais não exibem número."},
+    {id: 11, text: "Resumo e Abstract sem recuo inicial, com `Palavras-chave:`/`Keywords:` em negrito e iniciais maiúsculas; separar termos por ponto final (ex.: `Palavras-chave: ABNT. Teste. Lorem-ipsum.`)."},
+    {id: 12, text: "Títulos RESUMO, ABSTRACT, SUMÁRIO e REFERÊNCIAS em caixa alta 12pt, garantindo aparição correta no PDF."},
+    {id: 13, text: "Planeje ~2.7k–3.1k caracteres por página (450–520 palavras); em 5 páginas, busque 13.5k–15.5k caracteres."},
+    {id: 14, text: "Valores padrão na ausência de informações: Departamento de Educação, Curso de Psicologia, Lucas Camilo Carvalho, Salvador, 2025."},
+    {id: 15, text: "Sistema de citações exclusivamente autor–data. Use `\\autorcite{}` (até duas opções: `\\autorcite{chave}`, `\\autorcite[123]{chave}`, `\\autorcite*{chave}`, `\\autorcite*[123]{chave}`); passe apenas o número/páginas no opcional, pois o prefixo `p.` já é inserido pela macro. Forma não estrelada gera citação parentética `(Autor, ano, p.)`, e a estrelada gera citação textual `Autor (ano, p.)`. Não altere a assinatura."},
+    {id: 16, text: "Elementos opcionais controlados por chaves `\\mostrar...`; mantenha-os `true` exceto quando o usuário solicitar ocultação."},
+    {id: 17, text: "Estilo textual direto, sem construções “não é apenas”; evite emojis e substituições de vírgula por travessões/hífens (nunca use em dash em lugar de vírgula, especialmente em diálogos)."},
+    {id: 18, text: "Inclua arquivo `.toc` mínimo via `filecontents*` para garantir compilação do sumário já na primeira execução."},
+    {id: 19, text: "Garanta que o `.tex` seja autossuficiente em conteúdo textual e referências, dependendo apenas do `.bst` já presente no diretório."},
+    {id: 20, text: "Títulos de capítulos iniciam em nova página e preservam 1,5 entre o título e o parágrafo seguinte; seções e subseções mantêm 1,5 antes/depois na mesma página."},
+    {id: 21, text: "ABNT NBR 6023:2018 — configure `abntex2cite` com `abnt-emphasize=bf` para colocar em negrito o elemento localizador (título de obras completas, nome do periódico, título do livro em capítulos “In:” e título de páginas web)."},
+    {id: 22, text: "Resumos: gere um único `resumo` em português e um Abstract em inglês usando `\\begin{resumo}[ABSTRACT] ... \\end{resumo}` com `otherlanguage*{english}`; não insira o título manualmente dentro do ambiente para evitar cabeçalho duplicado."},
+    {id: 23, text: "Sumário sempre começa em nova página (quebra antes) e termina com outra quebra para separar a parte textual."},
+    {id: 24, text: "Seções primárias (indicativo 1, 2, 3, ...) devem iniciar nova página, vir em caixa alta, negrito, alinhadas à esquerda, corpo 12 em Arial, e sem qualquer traço/ponto após o número (NBR 14724/6024)."},
+    {id: 25, text: "Subseções (secundárias, terciárias, quaternárias — 1.1, 1.1.1, ...) permanecem na mesma página, com seções secundárias (1.1) em negrito e sentence case e níveis inferiores sem negrito, todos alinhados à esquerda em Arial 12; a numeração segue progressiva sem sinais após o indicativo e deve coincidir com o sumário."},
+    {id: 26, text: "Capa: alinhamento central; topo da página com logo da instituição (se houver, ex.: `logo_uneb.png`), nome da instituição e, logo abaixo, departamento/curso; depois autores; título e subtítulo (título em caixa alta/negrito, subtítulo normal) no meio da página; cidade e ano no rodapé da página."},
+    {id: 27, text: "Folha de rosto: nome dos autores próximo ao topo; título/subtítulo centralizados; em seguida, bloco descritivo (objetivo do texto) justificado com recuo de 7 cm; cidade e ano no rodapé da página; use a fonte pré-textual."},
+    {id: 28, text: "Numeração progressiva deve ser contínua em todas as seções e subseções e deve coincidir com as entradas do sumário, sem uso de travessões ou pontos finais."},
+    {id: 29, text: "Referências (seção pós-textual) devem ter título centralizado em caixa alta 12pt e seguir estritamente o estilo `abntex2-alf-local` já presente no diretório."},
+    {id: 30, text: "Quando usar capítulos como nível primário, utilize `\\chapter` para o nível 1 e `\\section`/`\\subsection` para níveis seguintes; no sumário, espelhe o template de resenha com recuos: capítulo 0em/1em, seção 0em/2em, subseção 0em/2.5em, subsubseção 0em/3em, títulos em caixa alta/negrito no TOC."},
+    {id: 31, text: "Seções numeradas (\\section, \\subsection) ficam em sentence case; apenas capítulos e elementos pré-textuais/REFERÊNCIAS quebram página. Mantenha `ABNTEXuppersection=false` nas saídas finais."}
   ],
   mapping: {
     columns: ["Tipo ABNT", "Google Docs", "Word", "Fonte / Tamanho / Recuo / Espaçamento"],
@@ -55,9 +58,16 @@ PROMPT {
     ]
   },
   latex_template: <<'LATEX'
-% --- FONTES: ESCOLHA SUA OPÇÃO ---
+% --- TOC MÍNIMO PARA COMPILAR NA PRIMEIRA PASSADA ---
+\begin{filecontents*}{\jobname.toc}
+\contentsline {section}{\numberline {1}Placeholder}{1}
+\end{filecontents*}
+
+% --- FONTE OBRIGATÓRIA ---
 \setmainfont{Arial}
-% \setmainfont{Times New Roman}
+
+% --- TAMANHO DO PAPEL E MARGENS ABNT ---
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
 
 % --- PARÁGRAFOS E ESPAÇAMENTO ---
 \setlength{\parindent}{1.25cm}
@@ -67,23 +77,72 @@ PROMPT {
 
 % --- ESPAÇAMENTO ENTRE TÍTULOS E TEXTO ---
 \usepackage{titlesec}
+\usepackage{indentfirst} % indenta primeiro parágrafo após títulos
+\usepackage[alf,abnt-emphasize=bf]{abntex2cite}
+\usepackage{etoolbox}
+\usepackage{xparse}
 \titlespacing*{\chapter}{0pt}{0pt}{1.5\baselineskip}
 \titlespacing*{\section}{0pt}{1.5\baselineskip}{1.5\baselineskip}
 \titlespacing*{\subsection}{0pt}{1.5\baselineskip}{1.5\baselineskip}
 \titlespacing*{\subsubsection}{0pt}{1.5\baselineskip}{1.5\baselineskip}
+\setlength{\cftbeforechapterskip}{0pt}
+\setlength{\cftbeforesectionskip}{0pt}
+\setlength{\cftbeforesubsectionskip}{0pt}
+\setlength{\cftbeforeparagraphskip}{0pt}
+\cftsetindents{chapter}{0em}{1em}
+\cftsetindents{section}{0em}{2em}
+\cftsetindents{subsection}{0em}{2.5em}
+\cftsetindents{subsubsection}{0em}{3em}
+\setlength{\cftlastnumwidth}{1em}
+\setlength{\cftbeforechapterskip}{0pt}
+\setlength{\cftbeforesectionskip}{0pt}
+\setlength{\cftbeforesubsectionskip}{0pt}
+\renewcommand{\cftchapterfont}{\bfseries\MakeUppercase}
+\renewcommand{\cftchapterpagefont}{\bfseries}
+\renewcommand{\cftsectionfont}{\bfseries}
+\renewcommand{\cftsectionpagefont}{\bfseries}
+\renewcommand{\cftsubsectionfont}{\normalfont}
+\renewcommand{\cftsubsectionpagefont}{\normalfont}
+\renewcommand{\cftsubsubsectionfont}{\normalfont}
+\renewcommand{\cftsubsubsectionpagefont}{\normalfont}
+\setlength{\cftsectionindent}{0em}
+\setlength{\cftsectionnumwidth}{2em}
+\setlength{\cftsubsectionindent}{2em}
+\setlength{\cftsubsectionnumwidth}{2.5em}
+
+% --- QUEBRA PARA CAPÍTULOS E PRÉ-TEXTUAIS NÃO NUMERADOS ---
+\preto{\chapter}{\clearpage}
+\pretocmd{\tableofcontents}{\clearpage}{}{}
+\AtBeginEnvironment{resumo}{\clearpage}
+\pretocmd{\bibliography}{\cleardoublepage\phantomsection}{}{}
+\NewDocumentCommand{\autorcite}{s O{} m}{%
+  \IfBooleanTF{#1}%
+    {\hyperlink{cite.#3}{\citeauthoronline{#3} (\citeyear{#3}\IfBlankTF{#2}{}{, p.~#2})}}%
+    {\hyperlink{cite.#3}{(\citeauthoronline{#3}, \citeyear{#3}\IfBlankTF{#2}{}{, p.~#2})}}%
+}
 
 % --- NOMES DAS SEÇÕES PRÉ-TEXTUAIS EM CAIXA ALTA ---
 \renewcommand{\resumoname}{RESUMO}
 \renewcommand{\abstractname}{ABSTRACT}
 \renewcommand{\contentsname}{\textbf{\MakeUppercase{SUMÁRIO}}}
+\renewcommand{\bibname}{\MakeUppercase{REFERÊNCIAS}}
+\renewcommand{\refname}{\MakeUppercase{REFERÊNCIAS}}
 
 % --- AJUSTES DE FONTES PARA CAPAS E SEÇÕES (12PT) ---
+\providecommand{\pretextualfont}{}
+\providecommand{\pretextualchapterfont}{}
 \renewcommand{\ABNTEXchapterfont}{\bfseries\normalsize}
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize}
 \renewcommand{\ABNTEXsectionfont}{\bfseries\normalsize}
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 \renewcommand{\ABNTEXsubsectionfont}{\normalfont\normalsize}
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsubsectionfont}{\normalfont\normalsize}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+\renewcommand{\pretextualfont}{\normalfont\normalsize}
+\renewcommand{\pretextualchapterfont}{\bfseries\normalsize}
+\setboolean{ABNTEXupperchapter}{true}
+\setboolean{ABNTEXuppersection}{false}
 
 % --- NUMERAÇÃO DE PÁGINA (CABECALHO DIREITO, FONTE 10) ---
 \makepagestyle{padraopagina}

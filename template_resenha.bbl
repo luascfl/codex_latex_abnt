@@ -1,0 +1,12 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[SOBRENOME Ano]{autor_ano}
+\abntrefinfo{SOBRENOME}{SOBRENOME}{Ano}
+{SOBRENOME, N. \textbf{Título da obra analisada}. Cidade: Editora, Ano.}
+
+\end{thebibliography}
