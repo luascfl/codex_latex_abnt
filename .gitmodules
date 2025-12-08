@@ -16,3 +16,6 @@
 [submodule "tmp_seara_psicologia_social"]
 	path = tmp_seara_psicologia_social
 	url = https://github.com/luascfl/tmp_seara_psicologia_social.git
+[submodule "tmp_resenha_pensamento_linguagem"]
+	path = tmp_resenha_pensamento_linguagem
+	url = https://github.com/luascfl/tmp_resenha_pensamento_linguagem.git

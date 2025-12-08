@@ -20,6 +20,9 @@ AGENTS.md is a predictable entry point for coding agents. Use it to understand h
 - Paragraphs: 1.25 cm indent, 1.5 spacing; long quotes in 10pt with 4 cm indent.
 - Headings: chapters in uppercase, sections sentence case; use existing metadata commands (`\nomeinstituicao`, `\tituloprincipal`, etc.) in Portuguese.
 - Citations: `abntex2cite` with `abnt-emphasize=bf`; keep `abntex2-alf-local.bst` as style.
+- Estilo textual: redija em português claro e acessível, evitando jargão desnecessário e frases labirínticas; priorize clareza de raciocínio, sem usar travessões ou em dashes no lugar de vírgula; use sentence case quando possível, sem maiúsculas estilísticas.
+- Palavras-chave: no resumo/abstract, inicie cada termo com inicial maiúscula e separe com ponto final, mantendo recuo zero.
+- Persona: escreva na perspectiva de estudante de Psicologia (Lucas Camilo Carvalho, Salvador-BA; PT primário, EN secundário) quando metadados pessoais forem relevantes.
 
 ## Using prompt_mestre_abnt-latex
 - When generating or modifying LaTeX, follow `prompt_mestre_abnt-latex.txt` as the authoritative spec (XeLaTeX, margins, spacing, title/page rules, `\autorcite` macro, pre-textual formatting, TOC stub via `filecontents*`).
