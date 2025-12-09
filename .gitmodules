@@ -25,3 +25,6 @@
 [submodule "tmp_live_protagonismo_juvenil"]
 	path = tmp_live_protagonismo_juvenil
 	url = https://github.com/luascfl/tmp_live_protagonismo_juvenil.git
+[submodule "tmp_entrevista_adultez"]
+	path = tmp_entrevista_adultez
+	url = https://github.com/luascfl/tmp_entrevista_adultez.git
