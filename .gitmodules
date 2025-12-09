@@ -19,3 +19,9 @@
 [submodule "tmp_resenha_pensamento_linguagem"]
 	path = tmp_resenha_pensamento_linguagem
 	url = https://github.com/luascfl/tmp_resenha_pensamento_linguagem.git
+[submodule "tmp_prova_medidas_em_psicologia"]
+	path = tmp_prova_medidas_em_psicologia
+	url = https://github.com/luascfl/tmp_prova_medidas_em_psicologia.git
+[submodule "tmp_live_protagonismo_juvenil"]
+	path = tmp_live_protagonismo_juvenil
+	url = https://github.com/luascfl/tmp_live_protagonismo_juvenil.git
