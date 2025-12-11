@@ -28,3 +28,6 @@
 [submodule "tmp_entrevista_adultez"]
 	path = tmp_entrevista_adultez
 	url = https://github.com/luascfl/tmp_entrevista_adultez.git
+[submodule "tmp_apresentacao_relatorio_oficinas_adolescencia"]
+	path = tmp_apresentacao_relatorio_oficinas_adolescencia
+	url = https://github.com/luascfl/tmp_apresentacao_relatorio_oficinas_adolescencia.git
