@@ -31,3 +31,6 @@
 [submodule "tmp_apresentacao_relatorio_oficinas_adolescencia"]
 	path = tmp_apresentacao_relatorio_oficinas_adolescencia
 	url = https://github.com/luascfl/tmp_apresentacao_relatorio_oficinas_adolescencia.git
+[submodule "tmp_apresentacao_propostas_2026_cj_instituto_cactus"]
+	path = tmp_apresentacao_propostas_2026_cj_instituto_cactus
+	url = https://github.com/luascfl/tmp_apresentacao_propostas_2026_cj_instituto_cactus.git
