@@ -34,3 +34,6 @@
 [submodule "tmp_apresentacao_propostas_2026_cj_instituto_cactus"]
 	path = tmp_apresentacao_propostas_2026_cj_instituto_cactus
 	url = https://github.com/luascfl/tmp_apresentacao_propostas_2026_cj_instituto_cactus.git
+[submodule "tmp_fichamento_psicopatologia"]
+	path = tmp_fichamento_psicopatologia
+	url = https://github.com/luascfl/tmp_fichamento_psicopatologia.git
