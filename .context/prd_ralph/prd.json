@@ -135,6 +135,21 @@
       "startedAt": "2026-07-12T11:15:00Z",
       "completedAt": "2026-07-12T11:20:00Z",
       "updatedAt": "2026-07-12T11:20:00Z"
+    },
+    {
+      "id": "US-PIZZ-006",
+      "title": "Integrar reflexões sobre a selfie e a extimidade",
+      "description": "Adicionar o conceito de 'diário êxtimo' (íntimo exposto) e a dualidade da selfie na explicação do jogo especular e novos laços sociais.",
+      "acceptanceCriteria": [
+        "A selfie citada como ponte relacional, não só como prisão da imagem",
+        "Uso do termo 'diário êxtimo' incluído no texto e articulado"
+      ],
+      "dependsOn": [
+        "US-PIZZ-005"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T11:35:00Z",
+      "completedAt": "2026-07-12T11:35:00Z"
     }
   ]
 }
