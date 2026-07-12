@@ -166,6 +166,53 @@
       "status": "done",
       "updatedAt": "2026-07-12T12:05:00Z",
       "completedAt": "2026-07-12T12:05:00Z"
+    },
+    {
+      "id": "US-PIZZ-008",
+      "title": "Clarificar o conceito de encontro real na rede social",
+      "description": "Reescrever o trecho sobre o 'lado bom das redes' para incluir um exemplo claro que contraponha a redução do outro a curtidas com a busca por interações autênticas.",
+      "acceptanceCriteria": [
+        "Trecho reescrito com maior clareza pedagógica",
+        "Exemplo prático de troca genuína inserido",
+        "Compilação bem-sucedida do documento final"
+      ],
+      "dependsOn": [
+        "US-PIZZ-007"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T12:20:00Z",
+      "completedAt": "2026-07-12T12:20:00Z"
+    },
+    {
+      "id": "US-PIZZ-009",
+      "title": "Integrar a conclusão central do artigo",
+      "description": "Reescrever as considerações finais para responder claramente às perguntas do usuário sobre a conclusão dos autores: a recusa em patologizar a tecnologia, a diferença entre o uso leigo e psicanalítico do narcisismo, e a dubiedade dos efeitos das redes sociais.",
+      "acceptanceCriteria": [
+        "Conclusão explícita sobre a dubiedade das redes",
+        "Esclarecimento de que a rede não é inerentemente narcisista",
+        "Diferenciação do narcisismo estruturante vs egoísmo leigo"
+      ],
+      "dependsOn": [
+        "US-PIZZ-008"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T12:35:00Z",
+      "completedAt": "2026-07-12T12:35:00Z"
+    },
+    {
+      "id": "US-PIZZ-010",
+      "title": "Contextualizar a menção a Lasch e o vazio do homem narcísico",
+      "description": "Expandir a frase 'Isso leva ao tédio e ao vazio profundo que Lasch descreve' para incluir a descrição exata de Lasch no artigo original (superficialidade emocional, exigência de aprovação e defesa contra a desintegração).",
+      "acceptanceCriteria": [
+        "O nome Christopher Lasch é introduzido com mais contexto",
+        "Sintomas do homem narcísico de Lasch são pontuados na mesma frase"
+      ],
+      "dependsOn": [
+        "US-PIZZ-009"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T12:55:00Z",
+      "completedAt": "2026-07-12T12:55:00Z"
     }
   ]
 }
