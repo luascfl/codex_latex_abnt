@@ -241,8 +241,9 @@
       "dependsOn": [
         "US-PIZZ-011"
       ],
-      "status": "open",
-      "updatedAt": "2026-07-12T13:30:00Z"
+      "status": "done",
+      "updatedAt": "2026-07-12T13:40:00Z",
+      "completedAt": "2026-07-12T13:40:00Z"
     }
   ]
 }

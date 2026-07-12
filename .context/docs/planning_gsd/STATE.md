@@ -17,11 +17,13 @@ Aplicar correções e melhorias de formato nos projetos derivados `tmp_*` com ba
 - Acesso à pasta `tmp_sintese_pizzimenti_2019`.
 
 ## Story ativa no Ralph
-`US-PIZZ-011` - Ajustar perspectiva para primeira pessoa do plural (concluída).
+`US-PIZZ-012` - Atualizar referência bibliográfica (concluída).
 
 ## Próxima ação recomendada
 Aguardar nova interação.
 
 ## Evidências atuais
-- O parágrafo final das considerações finais foi reescrito para utilizar a primeira pessoa do plural ("Para nós, estudantes de psicologia... Ele nos ajuda...").
-- A compilação do `.tex` passou limpa e o PDF foi atualizado.
+- A entrada BibTeX `@article{pizzimenti2019}` foi atualizada no `filecontents*` do arquivo `template_resenha.tex`.
+- O título foi mantido fiel à solicitação, assim como os campos `volume` (11), `number` (1), `url` e `urlaccessdate`.
+- O arquivo `.bib` obsoleto foi removido antes do build para forçar a re-extração pelo `filecontents*`.
+- A compilação PDF finalizou limpa e a referência final bate com a ABNT solicitada.
