@@ -69,6 +69,23 @@
       "status": "done",
       "updatedAt": "2026-07-12T09:45:00Z",
       "completedAt": "2026-07-12T09:45:00Z"
+    },
+    {
+      "id": "US-PIZZ-002",
+      "title": "Integrar highlights e comentários ao texto de Pizzimenti (2019)",
+      "description": "Inserir os comentários do usuário referentes a psicanálise além do modelo de Freud, psicanálise selvagem, uso dos aplicativos Sarahah/Tellonym/NGL, e a ideia de cancelamento na prisão final.",
+      "acceptanceCriteria": [
+        "Highlights e reflexões inseridos logicamente na narrativa",
+        "Menções aos apps atualizadas com Tellonym e NGL",
+        "Compilação bem sucedida e PDF gerado"
+      ],
+      "dependsOn": [
+        "US-PIZZ-001"
+      ],
+      "status": "done",
+      "startedAt": "2026-07-12T10:00:00Z",
+      "completedAt": "2026-07-12T10:10:00Z",
+      "updatedAt": "2026-07-12T10:10:00Z"
     }
   ]
 }

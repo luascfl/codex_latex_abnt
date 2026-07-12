@@ -17,12 +17,13 @@ Aplicar correções e melhorias de formato nos projetos derivados `tmp_*` com ba
 - Acesso à pasta `tmp_sintese_pizzimenti_2019`.
 
 ## Story ativa no Ralph
-`US-PIZZ-001` - Revisão editorial da síntese de Pizzimenti (2019) concluída.
+`US-PIZZ-002` - Integração de highlights e reflexões da síntese de Pizzimenti (2019) concluída.
 
 ## Próxima ação recomendada
-Selecionar nova story para evolução de outro projeto derivado ou encerrar milestone se não houver pendências críticas identificadas.
+Aguardar nova demanda de ajuste em outro derivado ou iniciar revisão final do repositório para fechamento da milestone.
 
 ## Evidências atuais
-- Em `tmp_sintese_pizzimenti_2019/template_resenha.tex`, o `\titulocomplemento` foi ajustado de uppercase ("DA QUEDA LIVRE AO ENCONTRO...") para sentence case ("Da queda livre ao encontro...").
-- A compilação `latexmk` foi concluída sem falhas (gerado `template_resenha.pdf` atualizado com o case correto no rosto e na capa).
-- O arquivo `.synctex.gz` foi atualizado pelo build.
+- Inserido no capítulo 1 o argumento sobre a aplicabilidade da psicanálise em novas áreas e o cuidado contra a "psicanálise selvagem".
+- No capítulo 2, integrados os paralelos com *Sarahah*, *Tellonym* e *NGL* sobre feedbacks anônimos e retaliação online.
+- No capítulo 4 (Considerações finais), adicionada a reflexão de que a exclusão da protagonista configura um "cancelamento" que a liberta das amarras da normatividade imposta pelo aplicativo.
+- O documento `template_resenha.tex` compilou limpo e o PDF foi atualizado.
