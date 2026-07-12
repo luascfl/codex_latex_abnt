@@ -34,8 +34,10 @@
       "dependsOn": [
         "US-CTX-001"
       ],
-      "status": "open",
-      "updatedAt": "2026-07-12T09:05:00Z"
+      "status": "done",
+      "updatedAt": "2026-07-12T09:10:00Z",
+      "startedAt": "2026-07-12T09:07:00Z",
+      "completedAt": "2026-07-12T09:10:00Z"
     },
     {
       "id": "US-OPS-003",
@@ -50,7 +52,7 @@
         "US-CTX-001"
       ],
       "status": "open",
-      "updatedAt": "2026-07-12T09:05:00Z"
+      "updatedAt": "2026-07-12T09:10:00Z"
     }
   ]
 }

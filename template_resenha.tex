@@ -205,7 +205,7 @@
 \providecommand{\autorcite}{}
 \RenewDocumentCommand{\autorcite}{s O{} m}{%
   \IfBooleanTF{#1}
-    {\hyperlink{cite.#3}{\citeyear{#3}\IfBlankTF{#2}{}{, p.~#2}}}
+    {\hyperlink{cite.#3}{\citeauthoronline{#3} (\citeyear{#3}\IfBlankTF{#2}{}{, p.~#2})}}
     {\hyperlink{cite.#3}{(\citeauthoronline{#3}, \citeyear{#3}\IfBlankTF{#2}{}{, p.~#2})}}}
 
 % --- Biblioteca BibTeX de exemplo ---
@@ -288,7 +288,7 @@ Contextualize a obra, apresente o autor analisado, situe a disciplina e explicit
 Utilize seções para apresentar os principais tópicos narrativos ou argumentos do texto analisado.
 
 \section{Primeiro eixo de análise}
-Descreva o argumento principal, indicando passagens relevantes da obra (\autorcite*{autor_ano}) e dos referenciais teóricos utilizados.
+Descreva o argumento principal, indicando passagens relevantes da obra \autorcite*{autor_ano} e dos referenciais teóricos utilizados.
 
 \section{Segundo eixo de análise}
 Detalhe outro aspecto da obra e relacione-o com a bibliografia complementar.
