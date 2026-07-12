@@ -6,7 +6,7 @@
 % --- PACOTES PRINCIPAIS ---
 \usepackage{fontspec}
 \usepackage[brazil]{babel}
-\usepackage[alf,abnt-show-options=none,abnt-emphasize=bf]{abntex2cite}
+\usepackage[alf,abnt-show-options=none,abnt-emphasize=bf,abnt-full-initials=yes]{abntex2cite}
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{etoolbox}
@@ -201,6 +201,8 @@
 \renewcommand{\cftdotsep}{1}
 
 % --- Referências ---
+\renewcommand{\UrlLeft}{}
+\renewcommand{\UrlRight}{}
 \renewcommand{\bibname}{\textbf{\MakeUppercase{REFERÊNCIAS}}}
 \providecommand{\autorcite}{}
 \RenewDocumentCommand{\autorcite}{s O{} m}{%

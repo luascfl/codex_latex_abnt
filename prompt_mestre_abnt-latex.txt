@@ -34,7 +34,7 @@ PROMPT {
     {id: 18, text: "Inclua arquivo `.toc` mínimo via `filecontents*` para garantir compilação do sumário já na primeira execução."},
     {id: 19, text: "Garanta que o `.tex` seja autossuficiente em conteúdo textual e referências, dependendo apenas do `.bst` já presente no diretório."},
     {id: 20, text: "Títulos de capítulos iniciam em nova página e preservam 1,5 entre o título e o parágrafo seguinte; seções e subseções mantêm 1,5 antes/depois na mesma página."},
-    {id: 21, text: "ABNT NBR 6023:2018 — configure `abntex2cite` com `abnt-emphasize=bf` para colocar em negrito o elemento localizador (título de obras completas, nome do periódico, título do livro em capítulos “In:” e título de páginas web)."},
+    {id: 21, text: "ABNT NBR 6023:2018 — configure `abntex2cite` com `abnt-emphasize=bf` (negrito no localizador) e `abnt-full-initials=yes` (sem abreviar nomes). Para contornar a falha do BibTeX com acentos em maiúsculas (ex: ESTêVãO), no `.bib` sempre proteja o último sobrenome em chaves, ex: `author = {Ivan Ramos {ESTÊVÃO}}`. Para adequar URLs à norma 2018 (remover `< >`), inclua `\\renewcommand{\\UrlLeft}{}` e `\\renewcommand{\\UrlRight}{}` antes das referências."},
     {id: 22, text: "Resumos: gere um único `resumo` em português e um Abstract em inglês usando `\\begin{resumo}[ABSTRACT] ... \\end{resumo}` com `otherlanguage*{english}`; não insira o título manualmente dentro do ambiente para evitar cabeçalho duplicado."},
     {id: 23, text: "Sumário sempre começa em nova página (quebra antes) e termina com outra quebra para separar a parte textual."},
     {id: 24, text: "Seções primárias (indicativo 1, 2, 3, ...) devem iniciar nova página, vir em caixa alta, negrito, alinhadas à esquerda, corpo 12 em Arial, e sem qualquer traço/ponto após o número (NBR 14724/6024)."},
@@ -80,7 +80,7 @@ PROMPT {
 % --- ESPAÇAMENTO ENTRE TÍTULOS E TEXTO ---
 \usepackage{titlesec}
 \usepackage{indentfirst} % indenta primeiro parágrafo após títulos
-\usepackage[alf,abnt-emphasize=bf]{abntex2cite}
+\usepackage[alf,abnt-emphasize=bf,abnt-full-initials=yes]{abntex2cite}
 \usepackage{etoolbox}
 \usepackage{xparse}
 \titlespacing*{\chapter}{0pt}{0pt}{1.5\baselineskip}
@@ -127,6 +127,8 @@ PROMPT {
 \renewcommand{\resumoname}{RESUMO}
 \renewcommand{\abstractname}{ABSTRACT}
 \renewcommand{\contentsname}{\textbf{\MakeUppercase{SUMÁRIO}}}
+\renewcommand{\UrlLeft}{}
+\renewcommand{\UrlRight}{}
 \renewcommand{\bibname}{\MakeUppercase{REFERÊNCIAS}}
 \renewcommand{\refname}{\MakeUppercase{REFERÊNCIAS}}
 
