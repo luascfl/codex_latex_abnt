@@ -150,6 +150,22 @@
       "status": "done",
       "updatedAt": "2026-07-12T11:35:00Z",
       "completedAt": "2026-07-12T11:35:00Z"
+    },
+    {
+      "id": "US-PIZZ-007",
+      "title": "Vincular a resenha à Teoria da Personalidade Psicanalítica",
+      "description": "Reescrever o início do Capítulo 3 para explicitar que o narcisismo não é um desvio, mas o processo de estruturação da personalidade (formação do Ego e mecanismos de defesa do eu) segundo a psicanálise freudiana.",
+      "acceptanceCriteria": [
+        "Menção clara de que a teoria freudiana fundamenta a estruturação da personalidade e do Ego",
+        "Narcisismo primário e Ideal de Eu definidos como partes do desenvolvimento normal",
+        "Busca por validação nas redes classificada como mecanismo de defesa psíquica"
+      ],
+      "dependsOn": [
+        "US-PIZZ-006"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T12:05:00Z",
+      "completedAt": "2026-07-12T12:05:00Z"
     }
   ]
 }

@@ -17,12 +17,12 @@ Aplicar correções e melhorias de formato nos projetos derivados `tmp_*` com ba
 - Acesso à pasta `tmp_sintese_pizzimenti_2019`.
 
 ## Story ativa no Ralph
-`US-PIZZ-006` - Integração de reflexão sobre extimidade e dualidade da selfie (concluída).
+`US-PIZZ-007` - Vincular a resenha à Teoria da Personalidade Psicanalítica (concluída).
 
 ## Próxima ação recomendada
-Aguardar nova interação ou concluir milestone.
+Aguardar novo direcionamento de leitura.
 
 ## Evidências atuais
-- Inserido no texto o conceito de "diário êxtimo", relacionando o caráter íntimo das publicações com sua estrutura desenhada para exibição externa.
-- A explicação do jogo especular agora ressalta que a "selfie", embora espelhe a preocupação com o próprio corpo, também funciona como ponte para esses novos laços sociais, não sendo apenas uma "prisão na vaidade".
-- Compilação realizada com sucesso, sem quebras e com formatação preservada.
+- A abertura do Capítulo 3 foi reescrita para ancorar explicitamente a argumentação na Teoria da Personalidade Psicanalítica, citando a estruturação do Ego, o narcisismo primário e a busca pelo "Ideal de Eu".
+- A busca por validação nas redes sociais foi categorizada claramente como um mecanismo de autodefesa narcísica contra o desamparo.
+- A compilação finalizou sem erros fatais, e o PDF já incorpora o texto completo em conformidade com as normas ABNT.
