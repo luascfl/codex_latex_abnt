@@ -244,6 +244,22 @@
       "status": "done",
       "updatedAt": "2026-07-12T13:40:00Z",
       "completedAt": "2026-07-12T13:40:00Z"
+    },
+    {
+      "id": "US-PIZZ-013",
+      "title": "Corrigir formatação exata da referência ABNT",
+      "description": "Corrigir a abreviação dos nomes dos autores, o problema de caixa alta em caracteres acentuados ('ESTêVãO') e adicionar a localidade '[s. l.]' na referência bibliográfica.",
+      "acceptanceCriteria": [
+        "Nomes dos autores exibidos por extenso",
+        "ESTÊVÃO renderizado corretamente em maiúsculas",
+        "[s. l.] adicionado antes do volume",
+        "Sem ponto duplo no final"
+      ],
+      "dependsOn": [
+        "US-PIZZ-012"
+      ],
+      "status": "open",
+      "updatedAt": "2026-07-12T14:00:00Z"
     }
   ]
 }

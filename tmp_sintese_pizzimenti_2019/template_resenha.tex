@@ -6,7 +6,7 @@
 % --- PACOTES PRINCIPAIS ---
 \usepackage{fontspec}
 \usepackage[brazil]{babel}
-\usepackage[alf,abnt-show-options=none,abnt-emphasize=bf]{abntex2cite}
+\usepackage[alf,abnt-show-options=none,abnt-emphasize=bf,abnt-full-initials=yes]{abntex2cite}
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{etoolbox}
@@ -213,9 +213,10 @@
 % --- Biblioteca BibTeX de exemplo ---
 \begin{filecontents*}{\jobname.bib}
 @article{pizzimenti2019,
-  author        = {Enzo Cléto Pizzimenti and Isis Graziele Da Silva and Ivan Ramos Estêvão},
+  author        = {Enzo Cléto Pizzimenti and Isis Graziele Da Silva and Ivan Ramos {ESTÊVÃO}},
   title         = {Da queda livre ao encontro com o outro nas redes sociais},
   journal       = {Trivium: Estudos Interdisciplinares},
+  address       = {[s. l.]},
   volume        = {11},
   number        = {1},
   year          = {2019},
