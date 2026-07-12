@@ -34,4 +34,10 @@ AGENTS.md is a predictable entry point for coding agents. Use it to understand h
 
 ## Commit & PR Guidelines
 - Prefer clear, imperative commit subjects (e.g., `adjust cover spacing`, `fix citation indent`) instead of generic “push.”
-- In PRs, describe what changed and why, mention affected files/submodules, and note any remaining LaTeX warnings. If submodules changed, list the `tmp_*` names. 
+- In PRs, describe what changed and why, mention affected files/submodules, and note any remaining LaTeX warnings. If submodules changed, list the `tmp_*` names.
+## AI Context References
+- Documentation index: `.context/docs/README.md`
+- Planejamento macro: `.context/docs/planning_gsd/PROJECT.md` e `.context/docs/planning_gsd/STATE.md`
+- Execução incremental: `.context/prd_ralph/prd.json`
+- Workflow PREVC: `.context/workflow/status.yaml`
+

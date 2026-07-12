@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "project": "codex_latex_abnt",
+  "qualityGates": [
+    "test -f .context/docs/planning_gsd/STATE.md && test -f .context/prd_ralph/prd.json && test -f .context/workflow/status.yaml",
+    "latexmk -xelatex -interaction=nonstopmode template_resenha.tex"
+  ],
+  "stories": [
+    {
+      "id": "US-CTX-001",
+      "title": "Bootstrap do contexto canônico do projeto",
+      "description": "Criar o contexto mínimo operacional para o repositório raiz, com documentação em .context/docs, milestones GSD, PRD inicial do Ralph e workflow PREVC ativo.",
+      "acceptanceCriteria": [
+        "Os diretórios .context/docs, .context/docs/planning_gsd, .context/prd_ralph e .context/workflow existem no repositório raiz",
+        "PROJECT.md e STATE.md descrevem o template raiz, a milestone ativa e a próxima ação recomendada",
+        "prd.json contém ao menos uma story futura com dependência explícita",
+        "O diretório .context/skills não permanece no repositório após o bootstrap"
+      ],
+      "dependsOn": [],
+      "status": "done",
+      "startedAt": "2026-07-12T08:55:00Z",
+      "completedAt": "2026-07-12T09:05:00Z",
+      "updatedAt": "2026-07-12T09:05:00Z"
+    },
+    {
+      "id": "US-ABNT-002",
+      "title": "Auditar o template raiz contra o prompt mestre",
+      "description": "Comparar template_resenha.tex com prompt_mestre_abnt-latex.txt, registrar o primeiro drift real e aplicar a correção de maior valor mantendo compatibilidade ABNT.",
+      "acceptanceCriteria": [
+        "Pelo menos um drift verificável entre template e prompt mestre é documentado e corrigido",
+        "Nenhuma macro contratual do template é removida ou renomeada sem necessidade",
+        "latexmk -xelatex -interaction=nonstopmode template_resenha.tex finaliza sem erro fatal após a mudança"
+      ],
+      "dependsOn": [
+        "US-CTX-001"
+      ],
+      "status": "open",
+      "updatedAt": "2026-07-12T09:05:00Z"
+    },
+    {
+      "id": "US-OPS-003",
+      "title": "Revisar automação de push e política de submódulos",
+      "description": "Inspecionar create_and_push_repo.sh, o uso de GITHUB_TOKEN.txt e o acoplamento com .gitmodules para reduzir risco operacional ao publicar raiz e derivados.",
+      "acceptanceCriteria": [
+        "O fluxo esperado do script é descrito no contexto do projeto",
+        "Riscos imediatos de publicação ou drift de submódulo são identificados",
+        "Qualquer ajuste proposto preserva a política atual de GitHub e Git LFS"
+      ],
+      "dependsOn": [
+        "US-CTX-001"
+      ],
+      "status": "open",
+      "updatedAt": "2026-07-12T09:05:00Z"
+    }
+  ]
+}
