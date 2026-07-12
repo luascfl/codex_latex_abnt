@@ -27,7 +27,7 @@ PROMPT {
     {id: 11, text: "Resumo e Abstract sem recuo inicial, com `Palavras-chave:`/`Keywords:` em negrito e iniciais maiúsculas; separar termos por ponto final (ex.: `Palavras-chave: ABNT. Teste. Lorem-ipsum.`)."},
     {id: 12, text: "Títulos RESUMO, ABSTRACT, SUMÁRIO e REFERÊNCIAS em caixa alta 12pt, garantindo aparição correta no PDF."},
     {id: 13, text: "Planeje ~2.7k–3.1k caracteres por página (450–520 palavras); em 5 páginas, busque 13.5k–15.5k caracteres."},
-    {id: 14, text: "Valores padrão na ausência de informações: Departamento de Educação, Curso de Psicologia, Lucas Camilo Carvalho (estudante de Psicologia em Salvador-BA; PT primário, EN secundário), Salvador, 2025."},
+    {id: 14, text: "Valores padrão na ausência de informações: Departamento de Educação -- DEDC, Curso de Psicologia, Lucas Camilo Carvalho (estudante de Psicologia em Salvador-BA; PT primário, EN secundário), Salvador, 2025."},
     {id: 15, text: "Sistema de citações exclusivamente autor–data. Use `\\autorcite{}` (até duas opções: `\\autorcite{chave}`, `\\autorcite[123]{chave}`, `\\autorcite*{chave}`, `\\autorcite*[123]{chave}`); passe apenas o número/páginas no opcional, pois o prefixo `p.` já é inserido pela macro. Forma não estrelada gera citação parentética `(Autor, ano, p.)`, e a estrelada gera citação textual `Autor (ano, p.)`. Não altere a assinatura."},
     {id: 16, text: "Elementos opcionais controlados por chaves `\\mostrar...`; mantenha-os `true` exceto quando o usuário solicitar ocultação."},
     {id: 17, text: "Estilo textual direto, sem construções “não é apenas”; evite emojis e substituições de vírgula por travessões/hífens (nunca use em dash em lugar de vírgula, especialmente em diálogos)."},
@@ -166,7 +166,6 @@ PROMPT {
   \item\relax\fontsize{10}{15}\selectfont
 }{\endlist}
 
-% --- VALORES CRUS PARA PRÉ-TEXTUAIS ---
 \newcommand{\nomeinstituicao}{[INSTITUICAO]}
 \newcommand{\nomedepartamento}{[DEPARTAMENTO]}
 \newcommand{\nomecurso}{[CURSO]}

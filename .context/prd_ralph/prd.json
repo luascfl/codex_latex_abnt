@@ -260,6 +260,20 @@
       ],
       "status": "open",
       "updatedAt": "2026-07-12T14:00:00Z"
+    },
+    {
+      "id": "US-OPS-004",
+      "title": "Corrigir metadado do Departamento da UNEB",
+      "description": "Atualizar a constante \\nomedepartamento de 'Departamento de Ciências da Vida -- DCV' ou 'Departamento de Educação' para 'Departamento de Educação -- DEDC' em todos os arquivos de template.",
+      "acceptanceCriteria": [
+        "prompt_mestre_abnt-latex.txt atualizado com DEDC no valor padrão",
+        "template_resenha.tex raiz atualizado com DEDC",
+        "tmp_sintese_pizzimenti_2019/template_resenha.tex atualizado com DEDC"
+      ],
+      "dependsOn": [],
+      "status": "done",
+      "updatedAt": "2026-07-12T14:15:00Z",
+      "completedAt": "2026-07-12T14:15:00Z"
     }
   ]
 }
