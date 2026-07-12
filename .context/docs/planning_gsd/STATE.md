@@ -17,13 +17,11 @@ Aplicar correções e melhorias de formato nos projetos derivados `tmp_*` com ba
 - Acesso à pasta `tmp_sintese_pizzimenti_2019`.
 
 ## Story ativa no Ralph
-`US-PIZZ-002` - Integração de highlights e reflexões da síntese de Pizzimenti (2019) concluída.
+`US-PIZZ-004` - Lógica de subjetividade da tecnologia (Sibilia, 2016) integrada.
 
 ## Próxima ação recomendada
-Aguardar nova demanda de ajuste em outro derivado ou iniciar revisão final do repositório para fechamento da milestone.
+Aguardar novo direcionamento de leitura.
 
 ## Evidências atuais
-- Inserido no capítulo 1 o argumento sobre a aplicabilidade da psicanálise em novas áreas e o cuidado contra a "psicanálise selvagem".
-- No capítulo 2, integrados os paralelos com *Sarahah*, *Tellonym* e *NGL* sobre feedbacks anônimos e retaliação online.
-- No capítulo 4 (Considerações finais), adicionada a reflexão de que a exclusão da protagonista configura um "cancelamento" que a liberta das amarras da normatividade imposta pelo aplicativo.
-- O documento `template_resenha.tex` compilou limpo e o PDF foi atualizado.
+- O parágrafo ligando a Sibilia (2016) ao efeito dos smartphones e da dialética tecnologia-comportamento foi incluído perfeitamente na ponte entre os capítulos 2 e 3.
+- Arquivos `.tex` e PDF atualizados após compilação bem-sucedida.

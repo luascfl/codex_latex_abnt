@@ -86,6 +86,55 @@
       "startedAt": "2026-07-12T10:00:00Z",
       "completedAt": "2026-07-12T10:10:00Z",
       "updatedAt": "2026-07-12T10:10:00Z"
+    },
+    {
+      "id": "US-PIZZ-003",
+      "title": "Integrar lógica algorítmica de engajamento à síntese de Pizzimenti (2019)",
+      "description": "Inserir comentário do usuário correlacionando a definição de marketing de engajamento com a amplificação algorítmica ('bola de neve' de viralização ou irrelevância) e compará-la ao sistema de pontuação da série Black Mirror.",
+      "acceptanceCriteria": [
+        "Engajamento definido como relacionamento além de métricas frias",
+        "Mecânica algorítmica do teste de público descrita na resenha",
+        "Paralelo com as vantagens cumulativas de Lacie em Queda Livre traçado"
+      ],
+      "dependsOn": [
+        "US-PIZZ-002"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T10:55:00Z",
+      "completedAt": "2026-07-12T10:55:00Z"
+    },
+    {
+      "id": "US-PIZZ-004",
+      "title": "Integrar reflexão sobre tecnologias e comportamento coletivo à síntese",
+      "description": "Inserir comentário do usuário citando a dialética entre a necessidade histórica da tecnologia e como ela molda o comportamento coletivo e a subjetividade, a exemplo dos smartphones (via Sibilia, 2016).",
+      "acceptanceCriteria": [
+        "Menção a Sibilia (2016) e ao impacto das ferramentas de comunicação",
+        "Reflexão sobre a via de mão dupla das tecnologias (nascem de necessidades e mudam comportamentos)",
+        "Exemplo explícito do impacto contínuo dos smartphones citado pelo usuário"
+      ],
+      "dependsOn": [
+        "US-PIZZ-003"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T11:45:00Z",
+      "completedAt": "2026-07-12T11:45:00Z"
+    },
+    {
+      "id": "US-PIZZ-005",
+      "title": "Desmistificar citação sobre jogo especular e vivência imaginária do corpo",
+      "description": "Explicar a citação sobre 'jogo especular' na resenha, traduzindo o jargão psicanalítico (telas como espelho) e a dualidade de exacerbar a imagem do corpo vs possibilitar novos horizontes relacionais.",
+      "acceptanceCriteria": [
+        "Explicação clara de 'jogo especular' no texto",
+        "Menção à tela como duplo espelho (aprisionamento narcísico vs novos laços sociais)",
+        "Compilação do PDF com sucesso"
+      ],
+      "dependsOn": [
+        "US-PIZZ-004"
+      ],
+      "status": "done",
+      "startedAt": "2026-07-12T11:15:00Z",
+      "completedAt": "2026-07-12T11:20:00Z",
+      "updatedAt": "2026-07-12T11:20:00Z"
     }
   ]
 }
