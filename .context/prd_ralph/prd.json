@@ -51,8 +51,24 @@
       "dependsOn": [
         "US-CTX-001"
       ],
-      "status": "open",
-      "updatedAt": "2026-07-12T09:10:00Z"
+      "status": "done",
+      "updatedAt": "2026-07-12T09:30:00Z",
+      "startedAt": "2026-07-12T09:20:00Z",
+      "completedAt": "2026-07-12T09:30:00Z"
+    },
+    {
+      "id": "US-PIZZ-001",
+      "title": "Revisão editorial da síntese de Pizzimenti (2019)",
+      "description": "Corrigir metadados e formatação textual em tmp_sintese_pizzimenti_2019/template_resenha.tex de acordo com o padrão ABNT local.",
+      "acceptanceCriteria": [
+        "Subtítulo em sentence case após os dois-pontos",
+        "Uso adequado de seções ou capítulos conforme o tamanho do texto",
+        "Preservar citações autor-data corretas"
+      ],
+      "dependsOn": [],
+      "status": "done",
+      "updatedAt": "2026-07-12T09:45:00Z",
+      "completedAt": "2026-07-12T09:45:00Z"
     }
   ]
 }
