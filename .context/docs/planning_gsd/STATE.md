@@ -17,11 +17,11 @@ Aplicar correções e melhorias de formato nos projetos derivados `tmp_*` com ba
 - Acesso à pasta `tmp_sintese_pizzimenti_2019`.
 
 ## Story ativa no Ralph
-`US-PIZZ-010` - Contextualizar a menção a Lasch e o vazio do homem narcísico (concluída).
+`US-PIZZ-011` - Ajustar perspectiva para primeira pessoa do plural (concluída).
 
 ## Próxima ação recomendada
 Aguardar nova interação.
 
 ## Evidências atuais
-- A menção a Christopher Lasch foi expandida para incluir seus sintomas do "homem narcísico": medo da intimidade, exigência de aprovação constante e superficialidade emocional, atuando como defesas contra o desamparo.
-- A compilação do `.tex` passou limpa.
+- O parágrafo final das considerações finais foi reescrito para utilizar a primeira pessoa do plural ("Para nós, estudantes de psicologia... Ele nos ajuda...").
+- A compilação do `.tex` passou limpa e o PDF foi atualizado.

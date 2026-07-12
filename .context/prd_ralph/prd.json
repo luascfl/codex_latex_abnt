@@ -213,6 +213,36 @@
       "status": "done",
       "updatedAt": "2026-07-12T12:55:00Z",
       "completedAt": "2026-07-12T12:55:00Z"
+    },
+    {
+      "id": "US-PIZZ-011",
+      "title": "Ajustar perspectiva do parágrafo final para 'nós'",
+      "description": "Reescrever o último parágrafo das Considerações Finais para adotar a primeira pessoa do plural, alinhando a voz do texto à perspectiva de 'nós, estudantes de psicologia', conforme pedido do usuário.",
+      "acceptanceCriteria": [
+        "Adoção da primeira pessoa do plural ('nós')",
+        "Manutenção da clareza e do tom acadêmico da resenha"
+      ],
+      "dependsOn": [
+        "US-PIZZ-010"
+      ],
+      "status": "done",
+      "updatedAt": "2026-07-12T13:05:00Z",
+      "completedAt": "2026-07-12T13:05:00Z"
+    },
+    {
+      "id": "US-PIZZ-012",
+      "title": "Atualizar referência bibliográfica",
+      "description": "Ajustar a entrada BibTeX no filecontents para bater perfeitamente com a referência enviada pelo usuário (volume, número, url, data de acesso).",
+      "acceptanceCriteria": [
+        "Entrada @article atualizada no template_resenha.tex",
+        "Remoção do .bib antigo para forçar sobrescrita",
+        "Compilação limpa com a referência exata"
+      ],
+      "dependsOn": [
+        "US-PIZZ-011"
+      ],
+      "status": "open",
+      "updatedAt": "2026-07-12T13:30:00Z"
     }
   ]
 }
