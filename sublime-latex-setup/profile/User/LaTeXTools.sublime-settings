@@ -1,0 +1,10 @@
+{
+    "builder": "traditional",
+    "forward_sync": true,
+    "keep_focus": true,
+    "viewer": "evince",
+    "linux": {
+        "sublime_executable": "/opt/sublime_text/sublime_text",
+        "sync_wait": 1.5
+    }
+}

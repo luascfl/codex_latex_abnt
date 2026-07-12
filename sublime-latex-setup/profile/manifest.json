@@ -1,0 +1,32 @@
+{
+  "package_name": "Latex Build On Window Blur",
+  "required_binaries": [
+    "evince",
+    "subl",
+    "synctex"
+  ],
+  "installed_packages": [
+    "1337 Color Scheme",
+    "LanguagePortuguese",
+    "LanguageTool",
+    "LaTeXOutline",
+    "LaTeXTools",
+    "Package Control",
+    "SublimeLinter",
+    "SublimeLinter-chktex"
+  ],
+  "user_files": [
+    "Preferences.sublime-settings",
+    "Package Control.sublime-settings",
+    "CorretorLaTeX.sublime-build",
+    "SublimeLinter.sublime-settings",
+    "LaTeXTools.sublime-settings"
+  ],
+  "synctex": {
+    "viewer": "evince",
+    "forward_sync": true,
+    "keep_focus": true,
+    "sublime_executable": "/opt/sublime_text/sublime_text",
+    "sync_wait": 1.5
+  }
+}

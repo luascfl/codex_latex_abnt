@@ -1,0 +1,15 @@
+{
+    "cmd": [
+        "chktex",
+        "-q",
+        "-v0",
+        "-f",
+        "%f:%l:%c: %m\\n",
+        "$file"
+    ],
+    "file_regex": "^(.+):([0-9]+):([0-9]+): (.*)$",
+    "selector": "text.tex.latex",
+    "env": {
+        "TERM": "xterm"
+    }
+}

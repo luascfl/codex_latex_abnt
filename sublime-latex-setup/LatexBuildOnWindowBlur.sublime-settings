@@ -1,0 +1,7 @@
+{
+    "enabled": true,
+    "selector": "text.tex.latex",
+    "extensions": [".tex"],
+    "save_all_dirty_views": true,
+    "build_delay_ms": 300
+}

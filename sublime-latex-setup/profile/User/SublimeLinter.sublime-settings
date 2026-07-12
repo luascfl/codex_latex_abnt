@@ -1,0 +1,22 @@
+{
+    "debug": true,
+    "paths": {
+        "linux": [
+            "/usr/bin",
+            "/usr/local/bin"
+        ]
+    },
+    "linters": {
+        "chktex": {
+            "disable": false,
+            "args": [],
+            "tempfile_suffix": ".tex",
+            "cmd": [
+                "chktex",
+                "-v0",
+                "-f%l:%c %k %n: %m",
+                "${file}"
+            ]
+        }
+    }
+}
