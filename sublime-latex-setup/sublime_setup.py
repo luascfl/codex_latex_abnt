@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 PROFILE_DIR = ROOT / "profile"
+PROFILE_HOME_DIR = PROFILE_DIR / "Home"
 PROFILE_USER_DIR = PROFILE_DIR / "User"
 MANIFEST_PATH = PROFILE_DIR / "manifest.json"
 DEFAULT_CONFIG_DIR = Path.home() / ".config" / "sublime-text"
@@ -70,11 +71,25 @@ def verify_binaries(required_binaries: list[str]) -> list[tuple[str, bool, str]]
 
 def verify_user_files(user_dir: Path, manifest: dict) -> list[tuple[str, bool, str]]:
     results = []
-    for name in manifest["user_files"]:
+    for name in manifest.get("user_files", []):
         source = PROFILE_USER_DIR / name
         target = user_dir / name
         if not target.exists():
             results.append((name, False, "missing in Packages/User"))
+            continue
+        if read_text(source) != read_text(target):
+            results.append((name, False, "content differs"))
+            continue
+        results.append((name, True, "ok"))
+    return results
+
+def verify_home_files(manifest: dict) -> list[tuple[str, bool, str]]:
+    results = []
+    for name in manifest.get("home_files", []):
+        source = PROFILE_HOME_DIR / name
+        target = Path.home() / name
+        if not target.exists():
+            results.append((name, False, "missing in home directory"))
             continue
         if read_text(source) != read_text(target):
             results.append((name, False, "content differs"))
@@ -131,7 +146,7 @@ def verify_synctex_inverse_search(user_dir: Path) -> tuple[bool, str]:
 def apply_user_files(user_dir: Path, manifest: dict) -> list[str]:
     messages = []
     user_dir.mkdir(parents=True, exist_ok=True)
-    for name in manifest["user_files"]:
+    for name in manifest.get("user_files", []):
         source = PROFILE_USER_DIR / name
         target = user_dir / name
         if target.exists() and read_text(source) == read_text(target):
@@ -144,6 +159,20 @@ def apply_user_files(user_dir: Path, manifest: dict) -> list[str]:
         messages.append(f"wrote {target}")
     return messages
 
+def apply_home_files(manifest: dict) -> list[str]:
+    messages = []
+    for name in manifest.get("home_files", []):
+        source = PROFILE_HOME_DIR / name
+        target = Path.home() / name
+        if target.exists() and read_text(source) == read_text(target):
+            messages.append(f"kept {target} (already in sync)")
+            continue
+        if target.exists():
+            backup = backup_path(target)
+            messages.append(f"backed up {target} -> {backup}")
+        write_text(target, read_text(source))
+        messages.append(f"wrote {target}")
+    return messages
 
 def apply_symlink(package_link: Path) -> list[str]:
     messages = []
@@ -174,6 +203,10 @@ def cmd_verify(config_dir: Path) -> int:
     symlink_ok, symlink_msg = verify_symlink(package_link)
     print(f"[package-link] {'OK' if symlink_ok else 'FAIL'} {symlink_msg}")
     ok &= symlink_ok
+
+    for name, status, detail in verify_home_files(manifest):
+        print(f"[home-file] {'OK' if status else 'FAIL'} {name}: {detail}")
+        ok &= status
 
     pkg_ok, pkg_msg = verify_installed_packages(user_dir, manifest)
     print(f"[package-control] {'OK' if pkg_ok else 'FAIL'} {pkg_msg}")
@@ -207,7 +240,7 @@ def cmd_apply(config_dir: Path) -> int:
     messages = []
     messages.extend(apply_user_files(user_dir, manifest))
     messages.extend(apply_symlink(package_link))
-
+    messages.extend(apply_home_files(manifest))
     for msg in messages:
         print(msg)
 

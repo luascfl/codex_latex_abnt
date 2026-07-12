@@ -28,5 +28,8 @@
     "keep_focus": true,
     "sublime_executable": "/opt/sublime_text/sublime_text",
     "sync_wait": 1.5
-  }
+  },
+  "home_files": [
+    ".latexmkrc"
+  ]
 }
