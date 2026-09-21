@@ -1,0 +1,210 @@
+% !TEX program = xelatex
+\documentclass[12pt,a4paper,oneside]{abntex2}
+
+\usepackage{fontspec}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+
+\geometry{left=3cm,top=3cm,right=2cm,bottom=2cm}
+\setmainfont{Arial}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\OnehalfSpacing
+\raggedbottom
+\setlength{\emergencystretch}{1em}
+
+\titlespacing*{\chapter}{0pt}{0pt}{1.5\baselineskip}
+\titlespacing*{\section}{0pt}{1.5\baselineskip}{1.5\baselineskip}
+\titlespacing*{\subsection}{0pt}{1.5\baselineskip}{1.5\baselineskip}
+\renewcommand{\ABNTEXchapterfont}{\bfseries\normalsize}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+\renewcommand{\ABNTEXsectionfont}{\bfseries\normalsize}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsectionfont}{\normalfont\normalsize}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+\setboolean{ABNTEXupperchapter}{true}
+\setboolean{ABNTEXuppersection}{false}
+\setboolean{ABNTEXuppersubsection}{false}
+
+\makepagestyle{padraopagina}
+\makeevenhead{padraopagina}{}{}{\fontsize{10}{12}\selectfont\thepage}
+\makeoddhead{padraopagina}{}{}{\fontsize{10}{12}\selectfont\thepage}
+\makeevenfoot{padraopagina}{}{}{}
+\makeoddfoot{padraopagina}{}{}{}
+
+\newcommand{\nomeinstituicao}{Universidade do Estado da Bahia}
+\newcommand{\nomedepartamento}{Departamento de Educação -- DEDC}
+\newcommand{\nomecurso}{Curso de Psicologia}
+\newcommand{\nomeautor}{Lucas Camilo Carvalho\\Guilherme Goés Soares\\Anna Júlia de Sousa Santana\\Marina Diniz Rocha de Oliveira\\Renata Cardoso de Assis Santos\\Júlia Carvalho Cunha}
+\newcommand{\nomecidade}{Salvador}
+\newcommand{\anoacademico}{2026}
+\newcommand{\nomedisciplina}{Psicologia}
+\newcommand{\nomeorientador}{Professora Meire Pereira Checa}
+\newcommand{\tituloprincipal}{Entrevista com profissional de psicologia}
+\newcommand{\titulocomplemento}{Atuação clínica e escolar}
+\newcommand{\tipodocumento}{Relatório de entrevista}
+\newcommand{\logoinstituicao}{../logo_uneb.png}
+
+\newcommand{\formatartitulo}{%
+  {\bfseries\normalsize\MakeUppercase{\tituloprincipal}: \normalfont\normalsize\titulocomplemento}%
+}
+
+\newcommand{\folhaderostodescricao}{%
+Trabalho apresentado como requisito parcial de avaliação na disciplina de \nomedisciplina, do \nomecurso\ da \nomeinstituicao, sob orientação de \nomeorientador.
+}
+
+\newcommand{\imprimircapaformatada}{%
+  \begin{capa}
+    \begin{center}
+      \vspace*{-1.73cm}
+      \IfFileExists{\logoinstituicao}{\includegraphics[width=5cm]{\logoinstituicao}\par}{}
+      \vspace{1cm}
+      {\bfseries\normalsize\MakeUppercase{\nomeinstituicao}\par}
+      {\bfseries\normalsize\MakeUppercase{\nomedepartamento}\par}
+      {\bfseries\normalsize\MakeUppercase{\nomecurso}\par}
+      \vspace{3cm}
+      {\bfseries\normalsize\MakeUppercase{\nomeautor}\par}
+      \vspace{3cm}
+      {\formatartitulo\par}
+      \vfill
+      {\bfseries\normalsize\nomecidade\par}
+      {\bfseries\normalsize\anoacademico\par}
+    \end{center}
+  \end{capa}
+}
+
+\newcommand{\imprimirfolhaderostoformatada}{%
+  \begin{folhaderosto}
+    \SingleSpacing
+    {\centering\bfseries\normalsize\MakeUppercase{\nomeautor}\par}
+    \vspace{\fill}
+    {\centering\formatartitulo\par}
+    \vspace{1.5cm}
+    {\SingleSpacing\leftskip=7cm\parindent=0pt\emergencystretch=1em\noindent\folhaderostodescricao\par}
+    \vspace{\fill}
+    {\centering\bfseries\normalsize\nomecidade\par}
+    {\centering\bfseries\normalsize\anoacademico\par}
+  \end{folhaderosto}
+}
+
+\begin{document}
+
+\pretextual
+\pagestyle{empty}
+\SingleSpacing
+\imprimircapaformatada
+\imprimirfolhaderostoformatada
+
+\textual
+\OnehalfSpacing
+\pagestyle{padraopagina}
+\aliaspagestyle{chapter}{padraopagina}
+
+\chapter{Introdução}
+
+Este relatório apresenta uma entrevista semiestruturada com Nelmara, psicóloga com experiência clínica e escolar. A atividade buscou conhecer sua trajetória de formação, compreender a organização de seu trabalho e discutir demandas escolares que atravessam a clínica, a família e a instituição educacional. A entrevista também permitiu abordar inclusão, processos de encaminhamento, referenciais teóricos, orientações profissionais e desafios da Psicologia Escolar.
+
+O roteiro foi elaborado em aula, com orientação da professora Meire. Depois de revisado, foi encaminhado à profissional para viabilizar a entrevista. O contato ocorreu por WhatsApp e a conversa foi realizada por Google Meet, com duração aproximada de quarenta a cinquenta minutos. A gravação foi feita com autorização prévia da entrevistada. A transcrição inicial foi apoiada por inteligência artificial e revisada posteriormente para corrigir falhas de reconhecimento e preservar a fidelidade das falas.
+
+A organização deste texto segue três movimentos. Primeiro, apresenta o processo de construção e realização da entrevista. Em seguida, desenvolve as perguntas do roteiro e as respostas da entrevistada, reunindo respostas dadas em momentos diferentes quando o diálogo alterou a ordem prevista. Por fim, sintetiza os principais aprendizados produzidos pela atividade.
+
+\chapter{Desenvolvimento}
+
+\section{Construção e realização da entrevista}
+
+A construção do roteiro partiu do interesse em compreender a trajetória acadêmica e profissional de uma psicóloga que já havia atuado tanto na clínica quanto na escola. As perguntas foram pensadas para produzir uma conversa aberta, mas organizada por eixos: formação, atuação profissional, público atendido, demandas escolares, inclusão, encaminhamentos e desafios do trabalho. A revisão da professora ajudou a ajustar o roteiro à trajetória da profissional e a tornar as perguntas mais adequadas ao objetivo da atividade.
+
+A entrevista ocorreu de forma fluida. As entrevistadoras retomaram respostas já dadas, reorganizaram a sequência das perguntas e aprofundaram temas que surgiram espontaneamente. Essa condução foi coerente com o caráter semiestruturado da atividade, pois preservou os eixos do roteiro sem interromper explicações relevantes da entrevistada. A profissional demonstrou disponibilidade para detalhar situações da prática e relacionar o cotidiano escolar a questões clínicas, familiares e institucionais.
+
+\section{Identificação e dados sociodemográficos}
+
+\noindent\textbf{Pergunta 1.} Poderia nos informar seu nome, idade, gênero e raça/cor? Caso prefira, pode indicar um nome fictício.
+
+\noindent\textbf{Resposta de Nelmara.} Meu nome é Nelmara, tenho 34 anos, me identifico como pessoa do gênero feminino e como branca.
+
+\section{Formação e trajetória profissional}
+
+\noindent\textbf{Pergunta 2.} Como você descreve sua formação e sua trajetória profissional em Psicologia, desde a graduação até chegar à atuação que exerce atualmente?
+
+\noindent\textbf{Pergunta complementar.} Realizou alguma especialização, pós-graduação voltado para Psicologia Escolar, infância ou adolescência?
+
+\noindent\textbf{Resposta de Nelmara.} Desde os estágios, minha ênfase foi clínica e eu atendia crianças e adultos. O atendimento infantil surgiu principalmente pela grande demanda e pelas vagas disponíveis nas listas de espera, não por uma escolha inicial exclusiva. Ao perceber que poderia ocupar a escola por outra perspectiva, fiz um curso de psicopedagogia. Essa formação dialogava com as queixas escolares que chegavam ao consultório e me permitiu aproximar clínica e escola. Minha trajetória nas duas áreas ocorreu de forma paralela.
+
+\section{Atuação clínica}
+
+\noindent\textbf{Pergunta 3.} Como você começou a atuar com crianças e adolescentes na clínica e no contexto escolar?
+
+\noindent\textbf{Pergunta complementar.} Como essas duas áreas passaram a fazer parte da sua trajetória profissional?
+
+\noindent\textbf{Resposta de Nelmara.} Comecei a atender crianças ainda nos estágios clínicos e, depois, a formação em psicopedagogia fortaleceu minha aproximação com a escola. Hoje, não atendo mais crianças na clínica. Foi uma decisão pessoal, ligada à intensidade física e emocional do trabalho com o público infantil e também à minha experiência de maternidade. Mantenho atendimentos clínicos de adolescentes, jovens e adultos, enquanto sigo trabalhando profissionalmente com crianças na escola.
+
+\section{Condições de trabalho e público atendido}
+
+\noindent\textbf{Pergunta 4.} Como é organizado o seu trabalho na clínica e na escola?
+
+\noindent\textbf{Pergunta complementar.} Qual é a faixa etária das crianças e adolescentes que você acompanha em cada um desses espaços?
+
+\noindent\textbf{Resposta de Nelmara.} Pela manhã, atuo como psicóloga escolar em uma escola privada de Salvador, com Educação Infantil e Ensino Fundamental I. Acompanho crianças de aproximadamente dois a doze anos e já tive experiência em outros segmentos, inclusive no Ensino Médio. Na clínica, acompanho adolescentes, jovens e adultos, pois não atuo mais com crianças. Não trabalho como psicopedagoga na clínica, mas essa formação permanece como repertório para compreender situações relacionadas à aprendizagem e à escola.
+
+\section{Demandas escolares na clínica}
+
+\noindent\textbf{Pergunta 5.} Quais são as principais demandas relacionadas à vida escolar que aparecem na clínica e quais são as demandas mais frequentes no seu trabalho dentro da escola? Você percebe diferenças ou aproximações entre elas?
+
+\noindent\textbf{Resposta de Nelmara.} Na clínica, especialmente nos atendimentos de adolescentes e famílias, aparecem questões como TDAH, conflitos geracionais, bullying, racismo, uso de drogas e situações que emergem da vida escolar. Na escola, essas demandas também estão presentes, somadas aos impactos da tecnologia e da comunicação violenta. Vejo aproximações entre os dois contextos, mas meu olhar muda. Na clínica, procuro compreender a experiência singular, a autoestima e os efeitos emocionais da situação. Na escola, busco acolher e adaptar o estudante, ampliar as possibilidades de aprendizagem e construir intervenções com professores, gestão, famílias, turmas e alunos.
+
+\section{Estratégias clínicas}
+
+\noindent\textbf{Pergunta 6.} Como você trabalha com cada tipo de demanda escolar que chega até você?
+
+\noindent\textbf{Resposta de Nelmara.} Quando uma demanda escolar chega à clínica, escuto o sujeito e procuro compreender os efeitos emocionais e de autoestima que a situação produz, considerando também sua idade. Quando necessário, converso com a escola e com a equipe sobre fatores emocionais que podem interferir na aprendizagem. No contexto escolar, privilegio estratégias institucionais e coletivas, articulando professoras, gestão, família e estudante, em vez de reduzir a situação a um diagnóstico individual.
+
+\section{Referenciais teóricos e orientações profissionais}
+
+\noindent\textbf{Pergunta 7.} Quais referenciais teóricos e orientações do Conselho Federal de Psicologia orientam sua atuação diante das demandas escolares?
+
+\noindent\textbf{Resposta de Nelmara.} Não me defino como psicanalista, mas minha formação e minha escuta clínica são fortemente orientadas pela psicanálise. No trabalho escolar, também mobilizo Lev Vygotsky, Henri Wallon, Winnicott, Eric Berne, Paulo Freire e Maria Helena Souza Patto. Procuro despatologizar as situações e não reduzir o estudante a um diagnóstico. Em relação às orientações profissionais, consulto o Código de Ética, que mantenho tanto na escola quanto no consultório, e acompanho materiais recebidos por e-mail quando têm relação com a minha prática. Também acompanho os debates sobre a atuação em psicopedagogia.
+
+\section{Relação entre clínica, família e escola}
+
+\noindent\textbf{Pergunta 8.} Como acontece a articulação no seu trabalho com a família e a escola durante o acompanhamento da criança ou do adolescente?
+
+\noindent\textbf{Resposta de Nelmara.} A articulação exige comunicação constante. Realizo muitas reuniões com famílias, profissionais e equipes multiprofissionais, além de visitas e conversas com a escola. Conforme cada caso, a interlocução pode incluir psicólogos, psicopedagogos, terapeutas, fonoaudiólogos e outros profissionais. Famílias separadas ou pouco participativas tornam o acompanhamento mais complexo. Considero que a comunicação é necessária com ou sem diagnóstico e que os casos sem diagnóstico definido podem exigir ainda mais articulação.
+
+\section{Inclusão escolar}
+
+\noindent\textbf{Pergunta 9.} Como você atua, na clínica e na escola, diante de demandas relacionadas à inclusão de crianças e adolescentes com deficiência, transtornos do neurodesenvolvimento ou outras necessidades específicas?
+
+\noindent\textbf{Resposta de Nelmara.} Reconheço avanços legais, mas percebo uma distância entre a norma e a prática. Defendo que o estudo de caso considere a dificuldade de aprendizagem e oriente decisões, como a necessidade de um Plano Educacional Individualizado, sem depender exclusivamente de diagnóstico. A escola precisa assumir responsabilidade pela aprendizagem, pois relatórios médicos padronizados nem sempre respondem à realidade de cada estudante. Esse trabalho exige diálogo com famílias e profissionais de saúde, intervenção precoce, adaptações individualizadas, formação continuada de professores e psicoeducação para professores, famílias e alunos. A inclusão envolve toda a rede escolar, incluindo recursos, gestão, acessibilidade e adaptações de avaliação.
+
+\section{Transtornos, dificuldades e encaminhamentos}
+
+\noindent\textbf{Pergunta 10.} Como você conduz situações de suspeita ou identificação de transtornos ou dificuldades de aprendizagem?
+
+\noindent\textbf{Resposta de Nelmara.} Na escola, começo pela comunicação cuidadosa com a família e pela produção de relatos e relatórios que não podem se transformar em diagnóstico pronto. Nesse espaço, sou psicóloga escolar e não estou ali para diagnosticar. Dependendo da hipótese, encaminho para psicologia, pediatria, neurologia, psicopedagogia ou outros profissionais, mantendo a escuta e o acompanhamento, sobretudo na Educação Infantil. Na clínica, posso realizar psicodiagnóstico em algumas situações, utilizo poucos testes, com maior presença de instrumentos ligados à atenção, e encaminho para acompanhamento neurológico ou psiquiátrico quando necessário.
+
+\section{Desafios da atuação clínica e escolar}
+
+\noindent\textbf{Pergunta 11.} Quais são os principais desafios da atuação clínica e escolar?
+
+\noindent\textbf{Resposta de Nelmara.} O desafio central é a psicoeducação de professores, famílias e estudantes. As formações precisam ajudar docentes a agir em situações concretas de inclusão, em vez de se limitarem a listas do que não fazer. Também considero desafiadoras a articulação entre saúde e escola, a resistência ou o luto de algumas famílias diante de necessidades específicas, a insuficiência de recursos e o esforço para produzir adaptações individualizadas. A escola foi historicamente organizada para homogeneizar, enquanto a inclusão exige reconhecer ritmos, necessidades e modos de aprender diferentes. A sobrecarga docente e a baixa procura pela área de Psicologia Escolar também são desafios importantes.
+
+\section{Desafios e encerramento}
+
+\noindent\textbf{Pergunta 12.} Há algum aspecto da sua atuação com crianças e adolescentes com demandas escolares que não abordamos e que você gostaria de acrescentar?
+
+\noindent\textbf{Resposta de Nelmara.} Considero fundamental estudar a instituição concreta em que atuo, incluindo seu projeto político-pedagógico, suas referências teóricas, seu método de alfabetização, as práticas de sala e os materiais pedagógicos. Esse estudo me permite dialogar tecnicamente com professoras e equipe, sem propor recomendações desligadas da realidade e da proposta da escola. Também reforço a importância social da escola para a infância e a adolescência e a necessidade de mais profissionais preparados e interessados na área educacional.
+
+\chapter{Conclusão}
+
+A entrevista possibilitou compreender a atuação em Psicologia Escolar como um trabalho que integra escuta clínica, análise institucional, diálogo com famílias e articulação com outros profissionais. A trajetória de Nelmara mostra que clínica e escola não aparecem como campos isolados. As demandas escolares chegam ao consultório por meio de adolescentes e famílias, enquanto questões emocionais, sociais e de aprendizagem atravessam o cotidiano da instituição escolar.
+
+A conversa também evidenciou que inclusão requer responsabilidade coletiva. A produção de relatórios, o contato com as famílias, as adaptações de avaliação e a articulação com profissionais de saúde devem preservar a singularidade de cada estudante. A formação continuada de professores e a psicoeducação de toda a comunidade escolar surgem como condições para que a inclusão se transforme em prática cotidiana.
+
+Como atividade formativa, a entrevista ampliou a compreensão do grupo sobre os desafios e as possibilidades da Psicologia Escolar. A disponibilidade da profissional, a riqueza de suas experiências e o modo como as entrevistadoras organizaram o diálogo contribuíram para uma experiência de aprendizagem concreta. O trabalho reforça a importância de uma atuação comprometida com a aprendizagem, com o acolhimento e com a despatologização dos estudantes.
+
+\end{document}
